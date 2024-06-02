@@ -1,15 +1,13 @@
-const palindromes = function (string) {
-  let alphanumeric = 'qwertyuiopasdfghjklzxcvbnm0123456789'
-  let cleanedString = string
-  .toLowerCase()
-  .split('')
-  .filter((char) => alphanumeric.includes(char))
-  .join('');
-  
-  let reversedString = cleanedString.split('').reverse().join('');
-  return reversedString === cleanedString;
+const palindromes = function (string) { 
+  let alphalnumberic = 'qwertyuiopasdfghjklzxcvbnm1234567890';
+  const cleanedString = string.toLowerCase()
+                              .split('')
+                              .filter((char) => alphalnumberic.includes(char));
+  let reversedString = Array.from(cleanedString).reverse();
+  if(reversedString.join() === cleanedString.join()) return true;
+  else return false; 
 }
-palindromes('A car, a man, a maraca.');
+// Reverse change original array
 
 // Do not edit below this line
 module.exports = palindromes;
