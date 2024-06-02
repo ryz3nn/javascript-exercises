@@ -9,7 +9,7 @@ const palindromes = function (string) {
   let reversedString = cleanedString.split('').reverse().join('');
   return reversedString === cleanedString;
 }
-
+palindromes('A car, a man, a maraca.');
 
 // Do not edit below this line
 module.exports = palindromes;
